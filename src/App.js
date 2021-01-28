@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import HeaderBlock from './components/HeaderBlock/index';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const AppList = () => {
+	const items = ['Item1', 'Item2', 'Item3', 'Item4', 'Item5'];
+	const firstItems = <li>Item0</li>;
+	return (
+		<ul>
+			{firstItems}
+			{items.map((item) => (
+				<li>{item + '!'}</li>
+			))}
+		</ul>
+	);
+};
+
+const AppHeader = () => {
+	return <h1 className='header'>This is test!</h1>;
+};
+
+const AppInput = () => {
+	const placeholder = 'Type text...';
+	return (
+		<label>
+			<input placeholder={placeholder} />
+		</label>
+	);
+};
+
+const App = () => {
+	return (
+		<div className='App'>
+			<HeaderBlock title='This is new Title' />
+		</div>
+	);
+};
 
 export default App;
