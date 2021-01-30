@@ -14,16 +14,19 @@ const App = () => {
 				id='1'
 				title='Передаю title'
 				desc='Передал еще desc'
+				urlBg={'/static/media/bg1.339e2b02.jpg'}
 			/>
 			<Layout
 				id='2'
 				title='Передаю title'
 				desc='Передал еще desc'
+				colorBg='#'
 			/>
 			<Layout
 				id='3'
 				title='Передаю title'
 				desc='Передал еще desc'
+				urlBg='/static/media/bg3.59f1c1e9.jpg'
 			/>
 			<Footer />
 		</div>
