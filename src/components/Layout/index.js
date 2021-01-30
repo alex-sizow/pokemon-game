@@ -1,9 +1,9 @@
 import './style.css';
 import background from './assets/bg3.jpg';
 console.log(background);
-const Layout = ({ id, title, desc, urlBg }) => {
+const Layout = ({ id, title, desc, urlBg, colorBg }) => {
 	const style = {
-		background: '#ffea00',
+		background: colorBg,
 		backgroundImage: 'url(' + urlBg + ')',
 	};
 

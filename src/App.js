@@ -20,7 +20,7 @@ const App = () => {
 				id='2'
 				title='Передаю title'
 				desc='Передал еще desc'
-				colorBg='#'
+				colorBg='#ffea00'
 			/>
 			<Layout
 				id='3'
