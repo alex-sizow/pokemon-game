@@ -2,6 +2,7 @@ import Header from './components/Header/index';
 import Layout from './components/Layout/index';
 import Footer from './components/Footer/index';
 import PokemonCard from './components/PokemonCard/index';
+import './App.css';
 
 const POKEMONS = [
 	{
@@ -146,7 +147,14 @@ const App = () => {
 			<Layout id='2' title='Передаю title' colorBg='#ffea00'>
 				<div className='flex'>
 					{POKEMONS.map((item, index) => (
-						<PokemonCard key={index.id} {...item} />
+						<PokemonCard
+							key={index.id}
+							name={item.name}
+							img={item.img}
+							id={item.id}
+							type={item.type}
+							values={item.values}
+						/>
 					))}
 				</div>
 			</Layout>
