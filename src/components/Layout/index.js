@@ -1,23 +1,21 @@
-import './style.css';
-import background from './assets/bg3.jpg';
-console.log(background);
-const Layout = ({ id, title, desc, urlBg, colorBg }) => {
+import styles from './style.module.css';
+
+import cn from 'classnames';
+const Layout = ({ id, title, urlBg, colorBg, children }) => {
 	const style = {
 		background: colorBg,
 		backgroundImage: 'url(' + urlBg + ')',
 	};
 
 	return (
-		<section style={style} class='root' id={id}>
-			<div class='wrapper'>
+		<section style={style} className={styles.root} id={id}>
+			<div className={styles.wrapper}>
 				<article>
-					<div class='title'>
+					<div className={styles.title}>
 						<h3>{title}</h3>
-						<span class='separator'></span>
+						<span className={styles.separator}></span>
 					</div>
-					<div class='desc full'>
-						<p>{desc}</p>
-					</div>
+					<div className={cn('full', 'desc')}>{children}</div>
 				</article>
 			</div>
 		</section>
