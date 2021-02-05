@@ -9,6 +9,9 @@ import HomePage from './routes/HomePage';
 import MenuHeader from './components/MenuHeader';
 import Footer from './components/Footer';
 import GamePage from './routes/GamePage';
+import AboutPage from './routes/AboutPage';
+import ContactPage from './routes/ContactPage';
+import NotFound from './routes/NotFound';
 
 import s from './style.module.css';
 
@@ -28,13 +31,15 @@ const App = () => {
 							<Route path='/' exact component={HomePage} />
 							<Route path='/home' component={HomePage} />
 							<Route path='/game' component={GamePage} />
-							<Route path='/about' component={GamePage} />
+							<Route path='/contact' component={ContactPage} />
+							<Route path='/about' component={AboutPage} />
 							<Route
 								render={() => () => (
-									<Redirect to='/404'></Redirect>
+									<Redirect to='/404'>{NotFound}</Redirect>
 								)}
 							/>
 						</Switch>
+						afsdf
 						<Footer />
 					</div>
 				</>

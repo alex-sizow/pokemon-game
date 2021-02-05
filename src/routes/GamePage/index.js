@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Layout from '../../components/Layout/';
 import PokemonCard from '../../components/PokemonCard';
 import s from './style.module.css';
@@ -126,6 +128,20 @@ const POKEMONS = [
 ];
 
 const GamePage = () => {
+	const [pokemons, setStatePokemons] = useState(POKEMONS);
+
+	const handleClickCard = (id) => {
+		setStatePokemons(() =>
+			pokemons.map((pokemon) => {
+				const newPokemon = { ...pokemon };
+				if (newPokemon.id === id) {
+					newPokemon.active = !newPokemon.active;
+				}
+				return newPokemon;
+			})
+		);
+	};
+
 	return (
 		<Layout id='2' title='Передаю title' colorBg='#ffea00'>
 			<div className={s.flex}>
@@ -137,6 +153,8 @@ const GamePage = () => {
 						id={item.id}
 						type={item.type}
 						values={item.values}
+						isActive={item.active}
+						onClickCard={handleClickCard}
 					/>
 				))}
 			</div>
