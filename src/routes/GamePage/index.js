@@ -3,7 +3,7 @@ import database from '../../service/firebase';
 import Layout from '../../components/Layout/';
 import PokemonCard from '../../components/PokemonCard';
 import s from './style.module.css';
-
+// не понимаю иногда как работает гит
 const GamePage = () => {
 	const [pokemons, setPokemons] = useState({});
 
