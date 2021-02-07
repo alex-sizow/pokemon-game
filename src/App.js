@@ -4,6 +4,7 @@ import {
 	Switch,
 	Redirect,
 } from 'react-router-dom';
+import database from './service/firebase';
 import cn from 'classnames';
 import HomePage from './routes/HomePage';
 import MenuHeader from './components/MenuHeader';
@@ -14,6 +15,7 @@ import ContactPage from './routes/ContactPage';
 import NotFound from './routes/NotFound';
 
 import s from './style.module.css';
+
 
 const App = () => {
 	const match = useRouteMatch('/');
