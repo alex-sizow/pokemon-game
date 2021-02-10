@@ -13,7 +13,7 @@ import GamePage from './routes/GamePage';
 import AboutPage from './routes/AboutPage';
 import ContactPage from './routes/ContactPage';
 import NotFound from './routes/NotFound';
-
+//
 import s from './style.module.css';
 
 const App = () => {
