@@ -1,0 +1,18 @@
+.button {
+	color: #fff;
+	background: rgb(255, 30, 0);
+	padding: 1em 1.5em;
+	outline: none;
+	border-radius: 9px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.column {
+	flex-direction: column;
+}
