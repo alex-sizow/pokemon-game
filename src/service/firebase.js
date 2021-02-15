@@ -47,3 +47,4 @@ export class Firebase {
 		this.database.ref('pokemons/' + newKey).set(data);
 	};
 }
+//
